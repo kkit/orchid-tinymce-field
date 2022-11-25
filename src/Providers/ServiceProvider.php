@@ -22,7 +22,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     /**
      * @var Dashboard
      */
-    protected $dashboard;
+    protected Dashboard $dashboard;
 
     /**
      * @param Dashboard $dashboard
@@ -46,8 +46,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     protected function registerResources(): self
     {
-        $this->dashboard->addPublicDirectory(self::PACKAGE_NAME,
-            self::PACKAGE_PATH . '/public');
+        //$this->dashboard->addPublicDirectory(self::PACKAGE_NAME,
+        //    self::PACKAGE_PATH . '/public');
+
+        $this->publishes([
+            __DIR__.'/../../../public' => public_path('vendor/orchid-tinymce-field'),
+        ], ['orchid-tinymce-field-assets', 'laravel-assets']);
+
 
         View::composer('platform::app', function () {
             $this->dashboard
