@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Leshkens\OrchidTinyMCEField;
+namespace kkit\OrchidTinyMCEField;
 
 use Orchid\Screen\Field;
 

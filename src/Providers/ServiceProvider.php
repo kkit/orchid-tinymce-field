@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Leshkens\OrchidTinyMCEField\Providers;
+namespace kkit\OrchidTinyMCEField\Providers;
 
 use Orchid\Platform\Dashboard;
 use Illuminate\Support\Facades\View;
