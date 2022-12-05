@@ -47,7 +47,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     protected function registerResources(): self
     {
         $this->publishes([
-            __DIR__.'/../../../public' => public_path('vendor/orchid-tinymce-field'),
+            __DIR__.'/../../public' => public_path('vendor/orchid-tinymce-field'),
         ], ['orchid-tinymce-field-assets', 'laravel-assets']);
 
         View::composer('platform::app', function () {
